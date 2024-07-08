@@ -52,9 +52,6 @@ export const fadeInAnimationVariants = (delayUnit: number, start: number = 0) =>
             delay: start + delayUnit * index
         }
     }),
-    whileInView: "animate",
-    viewport: { once: true }
-    
 })
 
 
