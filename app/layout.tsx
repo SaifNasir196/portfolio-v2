@@ -29,7 +29,6 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-teal-50 text-foreground relative dark:bg-slate-950 dark:text-foreground`}>
         <ThemeProvider>
-
           <div className="bg-teal-400 absolute top-[18rem] right-[8rem] h-[31.25rem] w-[31.25rem]
           rounded-full blur-[15rem] sm:w-[68.75rem] -z-10 dark:bg-teal-900"></div>
 

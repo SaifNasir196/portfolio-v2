@@ -39,3 +39,40 @@ export const getErrorMessage = (error: unknown): string => {
 
   return message
 }
+
+export const fadeInAnimationVariants = (delayUnit: number, start: number = 0) => ({
+    initial: {
+        opacity: 0,
+        y: 100
+    },
+    animate: (index: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: start + delayUnit * index
+        }
+    }),
+    whileInView: "animate",
+    viewport: { once: true }
+    
+})
+
+
+export const tweenInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0.5
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "tween",
+      stiffness: 260,
+      damping: 20,
+      delay: index,
+      duration: 0.2,
+    },
+  }),
+  
+}

@@ -1,11 +1,16 @@
 'use client'
 import React from 'react'
-
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "./ui/tabs"
+import { motion } from 'framer-motion'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
 import { Briefcase } from "lucide-react"
 import { infoData, coursesData, educationData } from "@/lib/data"
 import useActiveSectionView from '@/hooks/useActiveSectionView'
 import Skills from './Skills'
+import { fadeInAnimationVariants } from '@/lib/utils'
+
+
+const fadeInAAnimation = fadeInAnimationVariants(0.2, 0.4);
+
 
 const About = () => {
     const { ref } = useActiveSectionView("About");
@@ -13,22 +18,44 @@ const About = () => {
     return (
         <section className="max-w-5xl xl:h-[860px] p-20 xl:py-24 text-primary scroll-mt-32" id="about" ref={ref}>
             <div className="">
-                <h2 className="text-3xl font-semibold tracking-tight lg:text-4xl capitalize mb-6 xl:mb-16 text-center"> About me</h2>
+                <motion.h2
+                    className="text-3xl font-semibold tracking-tight lg:text-4xl capitalize mb-4 xl:mb-10 text-center"
+                    variants={fadeInAAnimation}
+                    initial='initial'
+                    animate='animate'
+                    custom={3}
+                >    
+                    About me
+                </motion.h2>
                 {/* tabs */}
                 <div className="">
                     <Tabs defaultValue="personal">
-                        <div className="w-[515px] mx-auto ">
-
+                        <motion.div
+                            className="w-[515px] mx-auto"
+                            variants={fadeInAAnimation}
+                            initial='initial'
+                            animate='animate'
+                            custom={5}
+                        >
                             <TabsList className='flex justify-center' >
                                 <TabsTrigger className='w-[170px] p-1' value='personal'> Personal Info</TabsTrigger>
                                 <TabsTrigger className='w-[170px]' value='qualifications'> Qualifications</TabsTrigger>
                                 <TabsTrigger className='w-[170px]' value='skills' > Skills</TabsTrigger>
                             </TabsList>
-                        </div>
+                        </motion.div>
                         {/* tabs content */}
-                        <div className="text-lg mt-24 xl:mt-16 mx-auto">
+                        <motion.div className="text-lg mt-24 xl:mt-16 mx-auto"
+                            variants={fadeInAAnimation}
+                            initial='initial'
+                            animate='animate'
+                            custom={6}
+                        >
                             <TabsContent value='personal'>
-                                <div className="flex flex-col items-center justify-center text-center">
+                                <motion.div
+                                    className="flex flex-col items-center justify-center text-center"
+                                    initial = {{ opacity: 0, y: 100 }}
+                                    animate={{ opacity: 100, y: 0 }}
+                                >
                                     <h3 className="text-2xl font-semibold mb-4"> Unmatched Service Quality for Over 10 Years</h3>
                                     <p className="max-w-[40rem] m-5 pb-10">
                                         I specialize in crafting intuitive websites with cutting-edge technology, 
@@ -44,11 +71,15 @@ const About = () => {
                                         </div>
                                         )}
                                     </div>
-                                </div>
+                                </motion.div>
                             </TabsContent>
 
                             <TabsContent value='qualifications'>
-                                <div className="grid md:grid-cols-2 gap-32">
+                                <motion.div
+                                    className="grid md:grid-cols-2 gap-32"
+                                    initial = {{ opacity: 0, y: 100 }}
+                                    animate={{ opacity: 100, y: 0 }}
+                                >
                                     {/* education */}
                                     <div className="flex flex-col gap-y-6">
                                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
@@ -88,16 +119,16 @@ const About = () => {
 
                                         {/* list */}
                                         <div className="flex flex-col gap-y-12">
-                                            {coursesData.map((item: { company?: string; role?: string; years: string }, index: number) => {
-                                                const { company, role, years } = item;
+                                            {coursesData.map((item: { name?: string; institute?: string; years: string }, index: number) => {
+                                                const { name, institute, years } = item;
                                                 return (
                                                     <div className="flex gap-x-8 group" key={index}>
                                                         <div className="h-[84px] w-[1px] bg-border relative ml-2">
                                                             <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                                         </div>
                                                         <div className="max-w-56" >
-                                                            <div className="font-semibold text-xl leading-none mb-2"> {company} </div>
-                                                            <div className="text-lg leading-none text-muted-foreground mb-4"> {role} </div>
+                                                            <div className="font-semibold text-xl leading-none mb-2"> {name} </div>
+                                                            <div className="text-lg leading-none text-muted-foreground mb-4"> {institute} </div>
                                                             <div className="text-base font-medium"> {years} </div>
                                                         </div>
                                                     </div>
@@ -108,14 +139,14 @@ const About = () => {
                                     </div>
 
                                         
-                                </div>
+                                </motion.div>
                             </TabsContent>
 
                             <TabsContent value='skills'>
                                 <Skills />
                             </TabsContent>
                             
-                        </div>
+                        </motion.div>
                         </Tabs>
                     </div>
                 </div>

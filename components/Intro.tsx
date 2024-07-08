@@ -9,7 +9,9 @@ import { BsFillSendFill } from "react-icons/bs";
 import { Button } from './ui/button'
 import useActiveSectionView from '@/hooks/useActiveSectionView'
 import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider'
+import { fadeInAnimationVariants, tweenInAnimationVariants } from '@/lib/utils'
 
+const fadeInAnimation = fadeInAnimationVariants(0.2);
 
 const Home = () => {
     const MotionImage = motion(Image);
@@ -17,16 +19,34 @@ const Home = () => {
     const {setActiveSection, setLastClickTime} = useActiveSectionContext();
 
     return (
-        <section id="home" className="gap-12 max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-primary scroll-mt-[100rem] mb-64" ref={ref}>
+        <section id="home" className="gap-12 max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-primary scroll-mt-[100rem] mb-28" ref={ref}>
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                 {/* left text */}
-                <motion.div className="flex-1" initial={{opacity: 0, y: -100}} animate={{opacity: 1, y: 0}} transition={{delay: 0.25}}>
+                <div
+                    className="flex-1"
+                >
                     {/* heading */}
-                    <h1 className="text-4xl font-bold tracking-tight lg:text-5xl mb-4">
+                    <motion.h1
+                        className="text-4xl font-bold tracking-tight lg:text-5xl mb-4"
+                        variants={fadeInAnimation}
+                        initial="initial"
+                        animate="amimate"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        custom={1}
+                    >
                         Hello, my name is Saif Nasir
-                    </h1>
+                    </motion.h1>
                     {/* role */}
-                    <div className="text-2xl sm:text-3xl font-semibold text-secondary mb-8">
+                    <motion.div
+                        className="text-2xl sm:text-3xl font-semibold text-secondary mb-8"
+                        variants={fadeInAnimation}
+                        initial="initial"
+                        animate="amimate"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        custom={2}
+                    >
                         <TypeAnimation
                             sequence={[
                                 "I'm a Web Developer",
@@ -41,9 +61,18 @@ const Home = () => {
                             wrapper="span"
                             className="text-secondary"
                         />
-                    </div>
+                    </motion.div>
+
                     {/* buttons */}
-                    <div className="flex flex-wrap gap-3 mb-6 grow">
+                    <motion.div
+                        className="flex flex-wrap gap-3 mb-6 grow"
+                        variants={fadeInAnimation}
+                        initial="initial"
+                        animate="amimate"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        custom={3}
+                    >
                         <Link href='#contact'>
                             <Button
                                 className="px-5 gap-x-3 rounded-full focus:scale-110 hover:scale-105 active:scale-100"
@@ -66,9 +95,10 @@ const Home = () => {
                         <Link href="https://github.com/SaifNasir196" target="_blank" rel="noopener noreferrer">
                             <Button variant={'secondary'} className='px-3 bg-secondary rounded-full outline-none focus:scale-115 hover:scale-105 active:scale-100 transition' > <FaGithub className='text-primary' size={20} /> </Button>
                         </Link>
-                    </div>
-                </motion.div>
+                    </motion.div>
+                </div>
                 
+                {/* right image */}
                 <div className="flex-1 flex justify-center lg:justify-end">
                     <div className="w-64 h-64 relative">
                         <MotionImage
@@ -76,12 +106,14 @@ const Home = () => {
                             fill
                             style={{ objectFit: 'cover' }}
                             quality={95}
-                            priority
                             alt="Saif Portrait"
                             className='rounded-full border-4 border-secondary'
-                            initial={{ opacity: 0, scale: 0.5 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ type: "tween", stiffness: 260, damping: 20, delay:0.5 }}
+                            variants={tweenInAnimationVariants}
+                            initial='initial'
+                            animate='animate'
+                            custom={0.2}
+
+
                         />
                     </div>
                 </div>

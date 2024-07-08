@@ -68,17 +68,14 @@ export const infoData = [
         icon: React.createElement(MailIcon),
         text: "muhammadsaif713@gmail.com",
     },
+  
     {
-        icon: React.createElement(Calendar),
-        text: "8th Dec. 2003",
+        icon: React.createElement(HomeIcon),
+        text: "London | Dubai",
     },
     {
         icon: React.createElement(GraduationCap),
         text: "Bachelors of Science in Computer Science",
-    },
-    {
-        icon: React.createElement(HomeIcon),
-        text: "London | Dubai",
     },
 ] as const
 
@@ -97,13 +94,18 @@ export const educationData = [
 
 export const coursesData = [
   {
-    company: 'ABC Inc.',
-    role: 'software engineer',
+    name: 'Advanced Learning Algorithms',
+    institute: 'Stanford Online',
     years: '2018 - 2020',
   },
   {
-    company: 'XYZ Corporation',
-    role: 'Senior Developer',
+    name: 'Machine Learning',
+    institute: 'Stanford Online',
+    years: '2020 - 2022',
+  },
+  {
+    name: 'Language and Tools of Financial Analysis',
+    institute: 'Stanford Online',
     years: '2020 - 2022',
   },
 ] as const;
@@ -134,23 +136,21 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
+  "C++",
+  "Java",
+  "Python",
   "JavaScript",
   "TypeScript",
+  "Scala",
+  "Django",
   "React",
   "Next.js",
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
+  "Redux",,
   "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "SQL",
   "Framer Motion",
 ] as const;
