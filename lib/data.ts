@@ -95,18 +95,18 @@ export const educationData = [
 export const coursesData = [
   {
     name: 'Advanced Learning Algorithms',
-    institute: 'Stanford Online',
-    years: '2018 - 2020',
-  },
-  {
-    name: 'Machine Learning',
-    institute: 'Stanford Online',
-    years: '2020 - 2022',
+    institute: 'DeepLearning.ai',
+    years: 'Oct 3, 2022',
   },
   {
     name: 'Language and Tools of Financial Analysis',
-    institute: 'Stanford Online',
-    years: '2020 - 2022',
+    institute: 'University of Melbourne',
+    years: 'Sep 24, 2022',
+  },
+  {
+    name: 'Machine Learning',
+    institute: 'Stanford | Online',
+    years: 'Aug 10, 2021',
   },
 ] as const;
 
