@@ -102,16 +102,19 @@ const Home = () => {
                 <div className="flex-1 flex justify-center lg:justify-end">
                     <div className="w-64 h-64 relative">
                         <MotionImage
-                            src="/portrait.jpeg"
+                            src="/portrait.png"
                             fill
-                            style={{ objectFit: 'cover' }}
+                            // style={{ objectFit: 'cover' }}
                             quality={95}
                             alt="Saif Portrait"
-                            className='rounded-full border-4 border-secondary'
+                            className='rounded-full shadow-md'
                             variants={tweenInAnimationVariants}
                             initial='initial'
                             animate='animate'
+                            whileInView="animate"
+                            viewport={{ once: true }}
                             custom={0.2}
+
 
 
                         />
