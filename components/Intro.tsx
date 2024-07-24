@@ -50,11 +50,11 @@ const Home = () => {
                         <TypeAnimation
                             sequence={[
                                 "I'm a Web Developer",
-                                200,
+                                2500,
                                 "I'm a Backend Engineer",
-                                1000,
-                                "I'm a Designer",
-                                1000,
+                                2500,
+                                "I'm a Software Developer",
+                                2500,
                             ]}
                             speed={50}
                             repeat={Infinity}

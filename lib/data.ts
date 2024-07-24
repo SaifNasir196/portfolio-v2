@@ -3,6 +3,8 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
+import aiform from '@/public/aiform.png';
+import quiver from '@/public/quiver.png';
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase, University } from "lucide-react"
 
 export const links = [
@@ -30,28 +32,36 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Software Developer | Sky Bullion",
+    location: "Dubai, UAE",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Designed, developed, rigorously tested an accounting software to manage financial transactions, invoices, and payroll. I also worked on a CRM system for managing customer relationships.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "5/23",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Project Manager | King's Labs",
+    location: "London, UK",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Managed a team of four developers to create a Media app for the Marketing team. I worked on the user authentication using appwrite.",
+    icon: React.createElement(CgWorkAlt),
+    date: "9/23 - 5/24",
+  },
+  {
+    title: "AI Intern | The Kusp - Gateway",
+    location: "London, UK",
+    description:
+      "Managing frontend and backend integration with Java API and React. I also work on the AI model.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "7/24 - Present",
+  },
+  {
+    title: "Full Stack Developer | AI Formbuilder by Matcha",
+    location: "London, UK",
+    description:
+      "Founded a startup that creates forms for businesses using AI and tracks responses and analytics.",
+    icon: React.createElement(FaReact),
+    date: "7/24 - Present",
   },
 ] as const;
 
@@ -112,26 +122,33 @@ export const coursesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "AI Formbuilder for businesses",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Creates forms for businesses using AI and tracks responses and analytics, includes pricing plans. I am the founder and full-stack developer.",
+    tags: ["Next.js", "Drizzle ORM", "Tanstack Query", "Clerk", "Gemini API"],
+    imageUrl: aiform,
 
   },
   {
-    title: "rmtDev",
+    title: "Brainf*** Compiler and Interpreter",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: corpcommentImg,
+      "A compiler and interpreter for the esoteric programming language Brainf***. Implementing features including file parsing, memory management, loop handling, and program generation. 4.6x performance improvement",
+    tags: ["Scala"],
+    imageUrl: "",
   },
   {
-    title: "Word Analytics",
+    title: "Task management System",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: corpcommentImg,
+      "Deployed a web app for managing task allocation,scheduling and managing multiple teams, fostering a collaborative environment for efficient task coordination",
+    tags: ["Django", "SQL",],
+    imageUrl: quiver,
+  },
+  {
+    title: "Digital Journaling App",
+    description:
+      "Deployed a web app for journaling, with features including mood tracking, daily reminders, and a secure login system using JSON-web-tokens",
+    tags: ["Django", "JWT", "React", "Heroku"],
+    imageUrl: quiver,
   },
 ] as const;
 
@@ -139,12 +156,12 @@ export const skillsData = [
   "C++",
   "Java",
   "Python",
-  "JavaScript",
   "TypeScript",
   "Scala",
   "Django",
-  "React",
   "Next.js",
+  "API",
+  "React",
   "Node.js",
   "Git",
   "Tailwind",
@@ -152,5 +169,9 @@ export const skillsData = [
   "Redux",,
   "Express",
   "SQL",
+  "Docker",
   "Framer Motion",
+  "Clerk Auth",
+  "Appwrite",
+  "Shadcn",
 ] as const;

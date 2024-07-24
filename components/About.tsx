@@ -56,10 +56,10 @@ const About = () => {
                                     initial = {{ opacity: 0, y: 100 }}
                                     animate={{ opacity: 100, y: 0 }}
                                 >
-                                    <h3 className="text-2xl font-semibold mb-4"> Unmatched Service Quality for Over 10 Years</h3>
+                                    <h3 className="text-2xl font-semibold mb-4"> From Concept to Code: Crafting Digital Solutions</h3>
                                     <p className="max-w-[40rem] m-5 pb-10">
-                                        I specialize in crafting intuitive websites with cutting-edge technology, 
-                                        delivering dynamic and engaging user experiences.
+                                        Dedicated software engineer with 5 years of experience crafting robust web applications.
+                                        Passionate about clean code,user-centric design, and staying ahead of emerging technologies. 
                                     </p>
 
                                     {/* icons */}
