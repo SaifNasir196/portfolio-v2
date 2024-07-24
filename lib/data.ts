@@ -5,7 +5,8 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import aiform from '@/public/aiform.png';
 import quiver from '@/public/quiver.png';
-import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase, University } from "lucide-react"
+import journal from '@/public/journal.png';
+import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap } from "lucide-react"
 
 export const links = [
   {
@@ -137,17 +138,17 @@ export const projectsData = [
     imageUrl: "",
   },
   {
-    title: "Task management System",
-    description:
-      "Deployed a web app for managing task allocation,scheduling and managing multiple teams, fostering a collaborative environment for efficient task coordination",
-    tags: ["Django", "SQL",],
-    imageUrl: quiver,
-  },
-  {
     title: "Digital Journaling App",
     description:
       "Deployed a web app for journaling, with features including mood tracking, daily reminders, and a secure login system using JSON-web-tokens",
     tags: ["Django", "JWT", "React", "Heroku"],
+    imageUrl: journal,
+  },
+  {
+    title: "Task management System",
+    description:
+      "Deployed a web app for managing task allocation,scheduling and managing multiple teams, fostering a collaborative environment for efficient task coordination",
+    tags: ["Django", "SQL",],
     imageUrl: quiver,
   },
 ] as const;

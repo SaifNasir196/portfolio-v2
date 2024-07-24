@@ -4,14 +4,15 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import { experiencesData } from '@/lib/data';
 import useActiveSectionView from '@/hooks/useActiveSectionView';
+import { cn } from '@/lib/utils';
 
 
 
 const Experience = () => {
     const { ref } = useActiveSectionView("Experience");
     return (
-        <section ref={ref} id='experience' className='py-24'>
-            <h2 className='text-3xl font-semibold tracking-tight lg:text-4xl mb-6 xl:mb-16 text-center capitalize'>
+        <section ref={ref} id='experience' className='py-24 pt-48 dark:text-primary-foreground'>
+            <h2 className='text-3xl font-semibold tracking-tight lg:text-4xl mb-6 xl:mb-16 text-center capitalize '>
                 Experience
             </h2>
 
@@ -21,12 +22,13 @@ const Experience = () => {
                         <React.Fragment key={index}>
                             <VerticalTimelineElement
                                 contentStyle={{
-                                    background:"white",
+                                    background: 'rgb(var(--card))',
                                     boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                                     border: "none",
                                     borderRadius: "1rem",
                                     textAlign: "left",
-                                    padding: "1.3rem 2rem"
+                                    padding: "1.3rem 2rem",
+
                                 }}
                                 contentArrowStyle={{
                                     borderRight: "0.4rem solid #9ca3af"
@@ -34,7 +36,8 @@ const Experience = () => {
                                 date={exp.date}
                                 icon={exp.icon}
                                 iconStyle={{
-                                    background: "white",
+                                    background: "rgb(var(--card))",
+                                    color: "rgb(var(--foreground))",
                                     fontSize: "1.5rem",
                                 }}
                                 visible={true}

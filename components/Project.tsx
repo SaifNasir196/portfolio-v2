@@ -26,14 +26,14 @@ const Project = ({title, description, tags, imageUrl}: ProjectProps  ) => {
         opacity: opacityProgress
       }}
     >
-      <article className=' bg-white max-w-[48rem] sm:h-full shadow-lg overflow-hidden sm:pr-8 relative group-even:pl-5
-         hover:bg-gray-100 transition rounded-2xl'
+      <article className=' bg-white transition-all dark:bg-accent dark:text-primary-foreground max-w-[48rem] sm:h-full shadow-lg overflow-hidden sm:pr-8 relative group-even:pl-5
+         hover:bg-gray-100 rounded-2xl'
       >
 
-        <div className="pt-4 pb-10 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[60%] flex flex-col gap-4 h-full group-even:ml-[18rem]">
+        <div className=" pt-4 pb-10 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[60%] flex flex-col gap-4 h-full group-even:ml-[18rem]">
 
           <h3 className='text-2xl font-medium' > {title} </h3>
-          <p className='mt-2 leading-relaxed text-gray-700' > {description} </p>
+          <p className='mt-2 leading-relaxed text-gray-700 dark:text-gray-400' > {description} </p>
           <ul className='flex flex-wrap mt-4 gap-2 sm:mt-auto'>
               {tags.map((tag, index) => (
                   <li className='bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full' key={index}> {tag} </li>

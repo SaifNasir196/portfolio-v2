@@ -16,7 +16,7 @@ const About = () => {
     const { ref } = useActiveSectionView("About");
     
     return (
-        <section className="max-w-5xl xl:h-[860px] p-20 xl:py-24 text-primary scroll-mt-32" id="about" ref={ref}>
+        <section className="max-w-5xl xl:h-[860px] p-20 xl:py-24 text-primary scroll-mt-32 dark:text-primary-foreground" id="about" ref={ref}>
             <div className="">
                 <motion.h2
                     className="text-3xl font-semibold tracking-tight lg:text-4xl capitalize mb-4 xl:mb-10 text-center"

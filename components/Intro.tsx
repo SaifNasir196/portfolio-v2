@@ -19,7 +19,7 @@ const Home = () => {
     const {setActiveSection, setLastClickTime} = useActiveSectionContext();
 
     return (
-        <section id="home" className="gap-12 max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-primary scroll-mt-[100rem] mb-28" ref={ref}>
+        <section id="home" className="gap-12 max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-primary dark:text-primary-foreground scroll-mt-[100rem] mb-28" ref={ref}>
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                 {/* left text */}
                 <div
