@@ -65,7 +65,7 @@ const About = () => {
                                     {/* icons */}
                                     <div className="grid md:grid-cols-2 gap-4 mb-12 ml-20">
                                         {infoData.map((item, index) => <div className="" key={index}>
-                                            <div className="w-fit flex text-left max-w-[20rem] gap-4" > <span className="text-primary">{item.icon}</span>
+                                            <div className="w-fit flex text-left max-w-[20rem] gap-4" > <span className="text-primary dark:text-secondary">{item.icon}</span>
                                                 {item.text}
                                             </div> 
                                         </div>
@@ -82,9 +82,9 @@ const About = () => {
                                 >
                                     {/* education */}
                                     <div className="flex flex-col gap-y-6">
-                                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                                        <div className="flex gap-x-4 items-center text-[22px] text-primary dark:text-secondary">
                                             <Briefcase />
-                                            <h4 className="capitalize font-medium"> Education </h4>
+                                            <h4 className="capitalize font-medium "> Education </h4>
                                         </div>
 
                                         {/* list */}
@@ -97,10 +97,10 @@ const About = () => {
                                                 return (
                                                     <div className="flex gap-x-8 group" key={index}>
                                                         <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                                            <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                                            <div className="w-[11px] h-[11px] rounded-full bg-primary dark:bg-secondary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                                         </div>
                                                         <div className="max-w-56" >
-                                                            <div className="font-semibold text-xl leading-none mb-2"> {university} </div>
+                                                            <div className="font-semibold text-xl leading-none mb-2 "> {university} </div>
                                                             <div className="text-lg leading-none text-muted-foreground mb-4"> {qualification} </div>
                                                             <div className="text-base font-medium"> {years} </div>
                                                         </div>
@@ -112,7 +112,7 @@ const About = () => {
                                     </div>
                                     {/* courses */}
                                     <div className="flex flex-col gap-y-6">
-                                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                                        <div className="flex gap-x-4 items-center text-[22px] text-primary dark:text-secondary">
                                             <Briefcase />
                                             <h4 className="capitalize font-medium"> Courses </h4>
                                         </div>
@@ -123,8 +123,8 @@ const About = () => {
                                                 const { name, institute, years } = item;
                                                 return (
                                                     <div className="flex gap-x-8 group" key={index}>
-                                                        <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                                            <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                                        <div className="h-[84px] w-[1px] bg-border relative ml-2 ">
+                                                            <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500 dark:bg-secondary"></div>
                                                         </div>
                                                         <div className="max-w-56" >
                                                             <div className="font-semibold text-xl leading-none mb-2"> {name} </div>

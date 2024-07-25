@@ -128,6 +128,8 @@ export const projectsData = [
       "Creates forms for businesses using AI and tracks responses and analytics, includes pricing plans. I am the founder and full-stack developer.",
     tags: ["Next.js", "Drizzle ORM", "Tanstack Query", "Clerk", "Gemini API"],
     imageUrl: aiform,
+    githubLink: "https://github.com/saifnasir196/ai-formbuilder",
+    siteLink: "ai-formbuilder-one.vercel.app"
 
   },
   {
@@ -136,6 +138,8 @@ export const projectsData = [
       "A compiler and interpreter for the esoteric programming language Brainf***. Implementing features including file parsing, memory management, loop handling, and program generation. 4.6x performance improvement",
     tags: ["Scala"],
     imageUrl: "",
+    githubLink: "",
+    siteLink: ""
   },
   {
     title: "Digital Journaling App",
@@ -143,6 +147,8 @@ export const projectsData = [
       "Deployed a web app for journaling, with features including mood tracking, daily reminders, and a secure login system using JSON-web-tokens",
     tags: ["Django", "JWT", "React", "Heroku"],
     imageUrl: journal,
+    githubLink: "",
+    siteLink: ""
   },
   {
     title: "Task management System",
@@ -150,6 +156,8 @@ export const projectsData = [
       "Deployed a web app for managing task allocation,scheduling and managing multiple teams, fostering a collaborative environment for efficient task coordination",
     tags: ["Django", "SQL",],
     imageUrl: quiver,
+    githubLink: "",
+    siteLink: ""
   },
 ] as const;
 
