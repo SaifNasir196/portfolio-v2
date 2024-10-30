@@ -87,6 +87,8 @@ const Home = () => {
                         <Link href="/resume.pdf" >
                             <Button variant={'secondary'} className='py-5 gap-x-3 bg-secondary text-primary rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-100 transition'> Resume <FaFileDownload size={18} /> </Button>
                         </Link>
+                        <Link href="/revolut_coverletter.pdf" className="display-none" >
+                        </Link>
 
                         <Link href="https://linkedin.com/in/saif-nasir" target="_blank" rel="noopener noreferrer">
                             <Button variant={'secondary'} className='px-3  rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-100 transition' > <FaLinkedin className='text-primary' size={20} /> </Button>
