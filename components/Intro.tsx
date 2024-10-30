@@ -16,7 +16,7 @@ const fadeInAnimation = fadeInAnimationVariants(0.2);
 const Home = () => {
     const MotionImage = motion(Image);
     const { ref } = useActiveSectionView("Home");
-    const {setActiveSection, setLastClickTime} = useActiveSectionContext();
+    const { setActiveSection, setLastClickTime } = useActiveSectionContext();
 
     return (
         <section id="home" className="gap-12 max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-primary dark:text-primary-foreground scroll-mt-[100rem] mb-28" ref={ref}>
@@ -84,8 +84,8 @@ const Home = () => {
                                 Contact me <BsFillSendFill size={18} />
                             </Button>
                         </Link>
-                        <Link href="/CV.pdf" >
-                            <Button variant={'secondary'} className='py-5 gap-x-3 bg-secondary text-primary rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-100 transition'> Resume <FaFileDownload size={18}  /> </Button>
+                        <Link href="/resume.pdf" >
+                            <Button variant={'secondary'} className='py-5 gap-x-3 bg-secondary text-primary rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-100 transition'> Resume <FaFileDownload size={18} /> </Button>
                         </Link>
 
                         <Link href="https://linkedin.com/in/saif-nasir" target="_blank" rel="noopener noreferrer">
@@ -97,7 +97,7 @@ const Home = () => {
                         </Link>
                     </motion.div>
                 </div>
-                
+
                 {/* right image */}
                 <div className="flex-1 flex justify-center lg:justify-end">
                     <div className="w-64 h-64 relative">
