@@ -14,9 +14,9 @@ import { LinkIcon } from 'lucide-react';
 type ProjectProps = (typeof projectsData)[number];
 
 
-const Project = ({title, description, tags, imageUrl, githubLink, siteLink}: ProjectProps  ) => {
+const Project = ({ title, description, tags, imageUrl, githubLink, siteLink }: ProjectProps) => {
   const ref = useRef<HTMLDivElement>(null)
-  const {scrollYProgress} = useScroll({
+  const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.25 1"],
   })
@@ -40,29 +40,33 @@ const Project = ({title, description, tags, imageUrl, githubLink, siteLink}: Pro
           <h3 className='text-2xl font-medium' > {title} </h3>
           <p className='mt-2 leading-relaxed text-gray-700 dark:text-gray-400' > {description} </p>
           <ul className='flex flex-wrap mt-4 gap-2 sm:mt-auto'>
-              {tags.map((tag, index) => (
-                  <li className='bg-primary dark:bg-secondary text-white dark:text-primary px-3 py-1 text-[0.75rem] uppercase tracking-wider rounded-full' key={index}> {tag} </li>
-              ))}
+            {tags.map((tag, index) => (
+              <li className='bg-primary dark:bg-secondary text-white dark:text-primary px-3 py-1 text-[0.75rem] uppercase tracking-wider rounded-full' key={index}> {tag} </li>
+            ))}
           </ul>
         </div>
 
         {/* <div className=""> */}
-          <div className="absolute -bottom-16 flex gap-6 right-10 group-even:right-[initial] group-even:left-10 z-10 group-hover:bottom-8 transition-all">
+        <div className="absolute -bottom-16 flex gap-6 right-10 group-even:right-[initial] group-even:left-10 z-10 group-hover:bottom-8 transition-all">
+          {githubLink &&
             <Link href={githubLink ?? `${process.env.NODE_ENV === 'development' ? process.env.NEXT_PUBLIC_DEV_URL : process.env.NEXT_PUBLIC_PROD_URL}`}>
-              <ImGithub size={40} className='text-gray-700 hover:text-gray-950 scale-110 hover:scale-125'/>
+              <ImGithub size={40} className='text-gray-700 hover:text-gray-950 scale-110 hover:scale-125' />
             </Link>
+          }
+          {siteLink &&
             <span className='ring ring-gray-700 hover:ring-black rounded-full p-1 bg-gray-700 hover:bg-black hover:scale-110 transition-all'>
-            <Link href={siteLink ?? `${process.env.NODE_ENV === 'development' ? process.env.NEXT_PUBLIC_DEV_URL : process.env.NEXT_PUBLIC_PROD_URL}`}>
-                <LinkIcon size={30} className='text-white'/>
+              <Link href={siteLink ?? `${process.env.NODE_ENV === 'development' ? process.env.NEXT_PUBLIC_DEV_URL : process.env.NEXT_PUBLIC_PROD_URL}`}>
+                <LinkIcon size={30} className='text-white' />
               </Link>
             </span>
-          </div>
+          }
+        </div>
 
         <Image
-            src={imageUrl}
-            alt='Project'
-            quality={95}
-            className="absolute top-8 -right-40 w-[30rem] rounded-t shadow-2xl group-even:right-[initial] group-even:-left-40
+          src={imageUrl}
+          alt='Project'
+          quality={95}
+          className="absolute top-8 -right-40 w-[30rem] rounded-t shadow-2xl group-even:right-[initial] group-even:-left-40
               group-hover: -translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105
               group-even:group:hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 transition"
         />
