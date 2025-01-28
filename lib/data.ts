@@ -79,7 +79,7 @@ export const infoData = [
     },
     {
         icon: React.createElement(GraduationCap),
-        text: "Bachelors of Science in Computer Science",
+        text: "BSc (Honours) in Computer Science",
     },
 ] as const
 
