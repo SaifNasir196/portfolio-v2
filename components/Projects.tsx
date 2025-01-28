@@ -8,9 +8,9 @@ import useActiveSectionView from '@/hooks/useActiveSectionView'
 
 const Projects = () => {
     const { ref } = useActiveSectionView("Projects");
-    
+
     return (
-        <section id='projects' className='scroll-mt-32 dark:text-primary-foreground' ref={ref}>
+        <section id='projects' className=' py-32 scroll-mt-32 dark:text-primary-foreground' ref={ref}>
             <h2 className='text-3xl font-semibold tracking-tight lg:text-4xl mb-6 xl:mb-16 text-center capitalize'> My Projects </h2>
 
             <div className="">

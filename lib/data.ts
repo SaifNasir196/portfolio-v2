@@ -6,6 +6,7 @@ import corpcommentImg from "@/public/corpcomment.png";
 import aiform from '@/public/aiform.png';
 import quiver from '@/public/quiver.png';
 import journal from '@/public/journal.png';
+import skytuts from '@/public/skytuts.png';
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap } from "lucide-react"
 
 export const links = [
@@ -33,36 +34,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Software Developer | Sky Bullion",
+    title: "Inclusive Careers Ambassador | King's Career ",
+    location: "London, UK",
+    description:
+      "Organized and hosted panel events featuring industry professionals to provide career insights and guidance, while also leading a comprehensive workshop on web development for over 100 students.",
+    icon: React.createElement(CgWorkAlt),
+    date: "August 2024 – Jan 2025",
+  },
+  {
+    title: "Software Developer Intern | Sky Bullion Trading",
     location: "Dubai, UAE",
     description:
-      "Designed, developed, rigorously tested an accounting software to manage financial transactions, invoices, and payroll. I also worked on a CRM system for managing customer relationships.",
+      "Developed and launched a financial dashboard for real-time tracking of gold prices and market trends, integrating a RAG system with vector similarity search that achieved 95% query accuracy and enhanced data-driven decision-making, increasing trading accuracy by 35%.",
     icon: React.createElement(CgWorkAlt),
-    date: "5/23",
+    date: "May 2024 – July 2024",
   },
   {
-    title: "Project Manager | King's Labs",
+    title: "Software Developer Intern | King's Labs",
     location: "London, UK",
     description:
-      "Managed a team of four developers to create a Media app for the Marketing team. I worked on the user authentication using appwrite.",
+      "Created a Django API for real-time trading data retrieval, built an automated data pipeline with Cron jobs that reduced manual processing by 20 hours per month, and developed interactive financial charts that streamlined market analysis and improved trading strategies, showcased at King’s Capital.",
     icon: React.createElement(CgWorkAlt),
-    date: "9/23 - 5/24",
-  },
-  {
-    title: "AI Intern | The Kusp - Gateway",
-    location: "London, UK",
-    description:
-      "Managing frontend and backend integration with Java API and React. I also work on the AI model.",
-    icon: React.createElement(FaReact),
-    date: "7/24 - Present",
-  },
-  {
-    title: "Full Stack Developer | AI Formbuilder by Matcha",
-    location: "London, UK",
-    description:
-      "Founded a startup that creates forms for businesses using AI and tracks responses and analytics.",
-    icon: React.createElement(FaReact),
-    date: "7/24 - Present",
+    date: "November 2023 – March 2024",
   },
 ] as const;
 
@@ -92,14 +85,14 @@ export const infoData = [
 
 export const educationData = [
   {
-    university: 'Al Diyafah High School',
-    qualification: 'A-levels in Physics, Math, Computer Science',
-    years: '2020 - 2022',
-  },
-  {
     university: "King's College London",
     qualification: 'Bachelor of Science in Computer Science',
     years: '2022 - 2026',
+  },
+  {
+    university: 'Al Diyafah High School',
+    qualification: 'A-levels in Physics, Math, Computer Science',
+    years: '2020 - 2022',
   },
 ]
 
@@ -123,23 +116,21 @@ export const coursesData = [
 
 export const projectsData = [
   {
-    title: "AI Formbuilder for businesses",
+    title: "Sky Tutors Platform",
     description:
-      "Creates forms for businesses using AI and tracks responses and analytics, includes pricing plans. I am the founder and full-stack developer.",
-    tags: ["Next.js", "Drizzle ORM", "Tanstack Query", "Clerk", "Gemini API"],
-    imageUrl: aiform,
-    githubLink: "https://github.com/saifnasir196/ai-formbuilder",
-    siteLink: "ai-formbuilder-one.vercel.app"
-
+      "Architected and launched a full-stack tutoring platform using Next.js, PostgreSQL, and Prisma, processing 80+ tutoring sessions monthly. Enhanced database performance with query optimization and caching strategies, reducing page load time by 40%.",
+    tags: ["TypeScript", "Next.js", "PostgreSQL", "Prisma"],
+    imageUrl: skytuts,
+    githubLink: "https://github.com/SaifNasir196/sky-tutors",
+    siteLink: "https://saif-nasir.vercel.app/"
   },
   {
-    title: "Brainf*** Compiler and Interpreter",
+    title: "Compilers Module Coursework",
     description:
-      "A compiler and interpreter for the esoteric programming language Brainf***. Implementing features including file parsing, memory management, loop handling, and program generation. 4.6x performance improvement",
-    tags: ["Scala"],
+      "Developed lexers, parsers, and interpreters using Scala, generating efficient and optimized code. Built a compiler targeting LLVM-IR with type inference for tasks like Mandelbrot visualization and Tower of Hanoi, and generated JVM-compatible assembler code with Jasmin, adding support for loops and control flow constructs.",
+    tags: ["Scala", "LLVM-IR", "JVM", "Jasmin"],
     imageUrl: "",
-    githubLink: "",
-    siteLink: ""
+    githubLink: "https://github.com/SaifNasir196/jvm-llvm-compilers",
   },
   {
     title: "Digital Journaling App",
@@ -168,6 +159,7 @@ export const skillsData = [
   "TypeScript",
   "Scala",
   "Django",
+  "FastAPI",
   "Next.js",
   "API",
   "React",
@@ -175,8 +167,6 @@ export const skillsData = [
   "Git",
   "Tailwind",
   "MongoDB",
-  "Redux",,
-  "Express",
   "SQL",
   "Docker",
   "Framer Motion",

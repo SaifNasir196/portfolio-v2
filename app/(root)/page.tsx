@@ -9,8 +9,8 @@ const Home = () => {
     <main className="flex flex-col items-center px-4 py-[10rem]">
       <Intro />
       <About />
-      <Projects />
       <Experience />
+      <Projects />
       <ContactForm />
     </main>
   );
