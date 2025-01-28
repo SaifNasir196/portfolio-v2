@@ -131,6 +131,7 @@ export const projectsData = [
     tags: ["Scala", "LLVM-IR", "JVM", "Jasmin"],
     imageUrl: "",
     githubLink: "https://github.com/SaifNasir196/jvm-llvm-compilers",
+    siteLink: ""
   },
   {
     title: "Digital Journaling App",
