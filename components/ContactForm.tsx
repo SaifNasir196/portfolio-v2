@@ -26,7 +26,7 @@ const ContactForm = () => {
                 Contact Me
             </h2>
             <p className='text-gray-700 text-center dark:text-gray-300'>
-                Please contact me directly at <u> <a href='mailto:muhammadsaif713@gmail.com'>muhammadsaif713@gmail.com</a> </u> or through this form
+                Please contact me directly at <u> <a href='mailto:k22047344@kcl.ac.uk'>k22047344@kcl.ac.uk</a> </u> or through this form
             </p>
 
             <form

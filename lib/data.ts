@@ -70,7 +70,7 @@ export const infoData = [
     },
     {
         icon: React.createElement(MailIcon),
-        text: "muhammadsaif713@gmail.com",
+        text: "k22047344@kcl.ac.uk",
     },
   
     {
